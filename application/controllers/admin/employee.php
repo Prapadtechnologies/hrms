@@ -24,7 +24,6 @@ class Employee extends Admin_Controller {
 
         if (!empty($id)) {// retrive data from db by id            
             $data['employee_info'] = $this->employee_model->all_emplyee_info($id);
-
             if (empty($data['employee_info'])) {
                 $type = "error";
                 $message = "No Record Found";

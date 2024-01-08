@@ -35,6 +35,10 @@
 */
 
 // The following values will probably need to be changed.
+/*$db['default']['username'] = "u206694750_prapad_hrms";
+$db['default']['password'] = "Prapad@123";
+$db['default']['database'] = "u206694750_prapad_hrms";*/
+
 $db['default']['username'] = "root";
 $db['default']['password'] = "";
 $db['default']['database'] = "hrms";

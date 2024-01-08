@@ -48,7 +48,7 @@ class Login_Model extends MY_Model {
                 'password' => $this->hash($this->input->post('password')),
                 'activate' => 1
                     ), TRUE);
-            if (count($employee)) {
+            if (count((array)$employee)) {
                 // Log in user
                 $employee_id = $employee->employee_id;
                 $this->_table_name = "tbl_employee"; //table name

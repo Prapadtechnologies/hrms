@@ -50,6 +50,7 @@ class Employee_Model extends MY_Model {
             $this->db->select('countries.countryName', FALSE);
             $this->db->from('tbl_employee');
             $this->db->join('countries', 'countries.idCountry  =  tbl_employee.nationality ', 'left');
+            $this->db->where('tbl_employee.employee_id', $id);
             $query_nationality = $this->db->get();
             $nationality = $query_nationality->row();
             if (!empty($nationality)) {

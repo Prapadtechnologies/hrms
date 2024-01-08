@@ -1,7 +1,27 @@
 <header class="header" >
     <div  class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
-        Admin Panel
+        <div class="heading">
+                    <?php
+                    $genaral_info = $this->session->userdata('genaral_info');
+                    if (!empty($genaral_info)) {
+                        foreach ($genaral_info as $info) {
+                            ?>
+                            <div class="heading-logo">
+                                <img src="<?php echo base_url() . $info->logo ?>" alt="" class="img-circle" style="height: 60px !important;"/>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        ?>
+                        <div class="heading-logo">
+                            <img src="<?php echo base_url() ?>img/logo.png" alt="Logo" class="img-circle"/>
+                            
+                        </div>
+                    <?php }
+                    ?>
+
+                </div>
     </div>
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -13,7 +33,7 @@
         </a>
         <div class="row">
             <div class="col-md-7 col-sm-12">
-                <div class="heading">
+                <!-- <div class="heading">
                     <?php
                     $genaral_info = $this->session->userdata('genaral_info');
                     if (!empty($genaral_info)) {
@@ -34,7 +54,7 @@
                     <?php }
                     ?>
 
-                </div>
+                </div> -->
             </div>
             <div class="navbar-right">
                 <ul class="nav navbar-nav custom-nav">

@@ -34,7 +34,7 @@ class Dashboard extends Employee_Controller {
         // get working days holiday
         $holidays = count($this->global_model->get_holidays()); //tbl working Days Holiday
         // get public holiday
-        $public_holiday = count($this->total_attendace_in_month($employee_id, TRUE));
+        $public_holiday = count((array)$this->total_attendace_in_month($employee_id, TRUE));
 
         // get total days in a month
         $month = date('m');

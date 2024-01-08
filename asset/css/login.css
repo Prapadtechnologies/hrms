@@ -31,11 +31,11 @@ header,section,aside,article,footer{
 
 }
 .login-logo img{
-    width: 100px;
+    /*width: 100px;*/
     height: 100px;
-    margin-left: 38%;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+    margin-left: 23%;
+    /*border: 1px solid #aaa;*/
+    /*border-radius: 5px;*/
 
 }
 /*-----------Main Body---------------*/

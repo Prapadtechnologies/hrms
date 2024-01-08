@@ -111,6 +111,8 @@ if (!empty($employee_info->employee_id)) {
                                 <option value="<?php echo $v_country->idCountry ?>" <?php
                                 if (!empty($employee_info->country_id)) {
                                     echo $v_country->countryName == $employee_info->nationality ? 'selected' : '';
+                                }else{
+                                    echo (strtolower($v_country->countryName) == 'india') ? 'selected' : '';
                                 }
                                 ?>><?php echo $v_country->countryName ?></option>
                                     <?php endforeach; ?>
@@ -192,6 +194,8 @@ if (!empty($employee_info->employee_id)) {
                                 <option value="<?php echo $v_country->idCountry ?>" <?php
                                 if (!empty($employee_info->country_id)) {
                                     echo $v_country->idCountry == $employee_info->country_id ? 'selected' : '';
+                                }else{
+                                    echo strtolower($v_country->countryName) == 'india' ? 'selected' : '';
                                 }
                                 ?>><?php echo $v_country->countryName ?></option>
                                     <?php endforeach; ?>
